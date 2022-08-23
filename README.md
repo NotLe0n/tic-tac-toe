@@ -6,8 +6,8 @@ Implementing a tic tac toe console application in every language I can.
 - [C++](/Cpp/tic-tac-toe.cpp)
 - [Java](Java/App.java)
 - [Javascript](Javascript/tic-tac-toe.js)
+- [Rust](Rust/tic-tac-toe.rs)
 
 ## Planned Languages:
-- Rust
 - DDP
 - Go
