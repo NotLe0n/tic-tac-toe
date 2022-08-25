@@ -8,6 +8,4 @@ Implementing a tic tac toe console application in every language I can.
 - [Javascript](Javascript/tic-tac-toe.js)
 - [Rust](Rust/tic-tac-toe.rs)
 - [Go](Go/tic-tac-toe.go)
-
-## Planned Languages:
-- DDP
+- [DDP](DDP/tic-tac-toe.ddp)

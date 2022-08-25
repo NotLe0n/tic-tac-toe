@@ -1,0 +1,91 @@
+Binde "Duden/Eingabe" ein.
+Binde "Duden/Ausgabe" ein.
+Binde "Duden/Laufzeit" ein.
+
+Der Boolean ist_Spieler_1_dran ist wahr.
+Die Zahlen Liste Spielfeld ist 9 Mal 0.
+
+Die Funktion spieler1dran gibt einen Boolean zurück, macht:
+	Gib ist_Spieler_1_dran zurück.
+Und kann so benutzt werden:
+	"Spieler 1 dran"
+
+Die Funktion spiel_nicht_gewonnen gibt einen Boolean zurück, macht:
+	Die Zahl Spieler_zahl ist 0.
+	Wenn (Spieler 1 dran) ist, dann:
+		Speichere 2 in Spieler_zahl.
+	Sonst:
+		Speichere 1 in Spieler_zahl.
+
+	Der Boolean Gewonnen ist wahr wenn
+		Spielfeld an der Stelle 1 gleich Spielfeld an der Stelle 2 und Spielfeld an der Stelle 1 gleich Spielfeld an der Stelle 3 und Spielfeld an der Stelle 1 gleich Spieler_zahl oder
+		Spielfeld an der Stelle 4 gleich Spielfeld an der Stelle 5 und Spielfeld an der Stelle 4 gleich Spielfeld an der Stelle 6 und Spielfeld an der Stelle 4 gleich Spieler_zahl oder
+		Spielfeld an der Stelle 7 gleich Spielfeld an der Stelle 8 und Spielfeld an der Stelle 7 gleich Spielfeld an der Stelle 9 und Spielfeld an der Stelle 7 gleich Spieler_zahl oder
+		Spielfeld an der Stelle 1 gleich Spielfeld an der Stelle 4 und Spielfeld an der Stelle 1 gleich Spielfeld an der Stelle 7 und Spielfeld an der Stelle 1 gleich Spieler_zahl oder
+		Spielfeld an der Stelle 2 gleich Spielfeld an der Stelle 5 und Spielfeld an der Stelle 2 gleich Spielfeld an der Stelle 8 und Spielfeld an der Stelle 2 gleich Spieler_zahl oder
+		Spielfeld an der Stelle 3 gleich Spielfeld an der Stelle 6 und Spielfeld an der Stelle 3 gleich Spielfeld an der Stelle 9 und Spielfeld an der Stelle 3 gleich Spieler_zahl oder
+		Spielfeld an der Stelle 1 gleich Spielfeld an der Stelle 5 und Spielfeld an der Stelle 1 gleich Spielfeld an der Stelle 9 und Spielfeld an der Stelle 1 gleich Spieler_zahl oder
+		Spielfeld an der Stelle 3 gleich Spielfeld an der Stelle 5 und Spielfeld an der Stelle 3 gleich Spielfeld an der Stelle 7 und Spielfeld an der Stelle 3 gleich Spieler_zahl ist.
+	
+	Gib nicht Gewonnen zurück.
+Und kann so benutzt werden:
+	"das Spiel nicht gewonnen"
+
+Die Funktion spiel_unendschieden gibt einen Boolean zurück, macht:
+	Für jede Zahl feld in Spielfeld, Wenn feld gleich 0 ist, Gib falsch zurück.
+	Gib wahr zurück.
+Und kann so benutzt werden:
+	"das Spiel unendschieden"
+
+Die Funktion schreibe_spielfeld gibt nichts zurück, macht:
+	Für jede Zahl i von 0 bis 2, mache:
+		Schreibe den Text "+-+-+-+" auf eine Zeile.
+		Für jede Zahl j von 0 bis 2, mache:
+			Schreibe den Buchstaben '|'.
+			Die Zahl Feld ist Spielfeld an der Stelle (i mal 3 plus j plus 1).
+			Wenn Feld gleich 0 ist, dann:
+				Schreibe den Buchstaben ' '.
+			Wenn aber Feld gleich 1 ist, dann:
+				Schreibe den Buchstaben 'X'.
+			Wenn aber Feld gleich 2 ist, dann:
+				Schreibe den Buchstaben 'O'.
+		Schreibe den Buchstaben '|' auf eine Zeile.
+	Schreibe den Text "+-+-+-+" auf eine Zeile.
+Und kann so benutzt werden:
+	"Zeige das Spielfeld"
+
+Solange (das Spiel nicht gewonnen) ist, mache:
+	Wenn (das Spiel unendschieden) ist, dann:
+		Zeige das Spielfeld.
+		Schreibe den Text "Das Spiel ist unendschieden" auf eine Zeile.
+		Beende das Programm.
+
+	Wenn (Spieler 1 dran) ist, dann:
+		Schreibe den Text "Bitte nehme einen Zug, Spieler 1" auf eine Zeile.
+	Sonst:
+		Schreibe den Text "Bitte nehme einen Zug, Spieler 2" auf eine Zeile.
+	Schreibe den Text "Das Spielfeld sieht so aus:" auf eine Zeile.
+	Zeige das Spielfeld.
+	Schreibe den Text "Schreibe die Position, wo du dein Zeichen setzen willst. [1-9]" auf eine Zeile.
+
+	Die Zahl eingabe ist die nächste Benutzereingabe als Zahl.
+	Solange eingabe kleiner als 1 oder eingabe größer als 9 ist, mache:
+		Schreibe den Text "Ungültige Eingabe! Bitte schreibe nur Zahlen von 1 bis 9!" auf eine Zeile.
+		Speichere die nächste Benutzereingabe als Zahl in eingabe.
+
+	Wenn Spielfeld an der Stelle eingabe gleich 0 ist, dann:
+		Wenn (Spieler 1 dran) ist, dann:
+			Spielfeld an der Stelle eingabe ist 1.
+		Sonst:
+			Spielfeld an der Stelle eingabe ist 2.
+		
+		Negiere ist_Spieler_1_dran.
+	
+Zeige das Spielfeld.
+
+Wenn (Spieler 1 dran) ist, dann:
+	Schreibe den Text "Spieler 2 hat gewonnen!" auf eine Zeile.
+Sonst:
+	Schreibe den Text "Spieler 1 hat gewonnen!" auf eine Zeile.
+
+Beende das Programm.
