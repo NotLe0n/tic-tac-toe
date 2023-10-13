@@ -1,8 +1,11 @@
+Binde "Duden/Eingabe" ein.
+Binde "Duden/Ausgabe" ein.
+Binde "Duden/Laufzeit" ein.
 Binde "ttt-funktionen" ein. [ Hier sind Funktionen und Variablen für die Spiel-Logik versteckt ]
 
 [ Programm anfang ]
-Solange (das Spiel nicht gewonnen) ist, mache:
-	Wenn (das Spiel unendschieden) ist, dann:
+Solange das Spiel nicht gewonnen ist, mache:
+	Wenn das Spiel unendschieden ist, dann:
 		Zeige das Spielfeld.
 		Schreibe den Text "Das Spiel ist unendschieden" auf eine Zeile.
 		Beende das Programm.
@@ -14,10 +17,10 @@ Solange (das Spiel nicht gewonnen) ist, mache:
 	Schreibe den Text "Schreibe die Position, wo du dein Zeichen setzen willst. [1-9]" auf eine Zeile.
 
 	[Nutzereingabe validieren]
-	Die Zahl Eingabe ist die nächste Benutzereingabe als Zahl.
-	Solange Eingabe kleiner als 1 oder Eingabe größer als 9 ist, mache:
+	Die Zahl Eingabe ist die nächste Zahl.
+	Solange Eingabe kleiner als 1 ist oder Eingabe größer als 9 ist, mache:
 		Schreibe den Text "Ungültige Eingabe! Bitte schreibe nur Zahlen von 1 bis 9!" auf eine Zeile.
-		Speichere die nächste Benutzereingabe als Zahl in Eingabe.
+		Speichere die nächste Zahl in Eingabe.
 
 	[Spielfeld aktualisieren und Spieler welchseln]
 	Wenn Spielfeld an der Stelle Eingabe gleich 0 ist, dann:
