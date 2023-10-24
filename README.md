@@ -9,5 +9,5 @@ Implementing a tic tac toe console application in every language I can.
 - [Rust](Rust/tic-tac-toe.rs)
 - [Go](Go/tic-tac-toe.go)
 - [DDP](DDP/tic-tac-toe.ddp)
-- [MATLAB](Matlab/tictactoe.m)
+- [MATLAB](MATLAB/tic-tac-toe.m)
 - [Python](Python/tic-tac-toe.py)
