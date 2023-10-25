@@ -8,8 +8,7 @@ while ~CheckWin(board)
         disp("This game was a draw")
     end
     
-    if player_1_turn, disp("Please take a turn player 1")
-    else, disp("Please take a turn player 2"); end
+	fprintf("Please take a turn player %d\n", 1 * ~player_1_turn + 1)
     
     disp("The board looks like this:")
     DisplayBoard(board)
@@ -20,17 +19,14 @@ while ~CheckWin(board)
     end
 
     if board(i) == 0
-        if player_1_turn, board(i) = 1;
-        else, board(i) = -1; end
-        
+		board(i) = -1 * ~player_1_turn + 1 * player_1_turn;
         player_1_turn = ~player_1_turn;
     end
 end
 
 clc
 DisplayBoard(board)
-if ~player_1_turn, disp("Player 1 won the game!")
-else, disp("Player 2 won the game!"); end
+fprintf("Player %d won the game!\n", 1 * player_1_turn + 1)
 
 function w=CheckWin(board)
     diag_sum = cat(1, sum(diag(board)), sum(diag(fliplr(board))));
