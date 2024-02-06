@@ -11,3 +11,4 @@ Implementing a tic tac toe console application in every language I can.
 - [DDP](DDP/tic-tac-toe.ddp)
 - [MATLAB](MATLAB/tic-tac-toe.m)
 - [Python](Python/tic-tac-toe.py)
+- [MIPS Assembly](MIPS/tic-tac-toe.asm)
