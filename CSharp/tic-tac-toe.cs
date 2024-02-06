@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace TicTacToe;
+namespace CSharp;
 
-public class Program
+public class TicTacToe
 {
-	public enum BoardState
+	private enum BoardState
 	{
 		Unset,
 		X,
@@ -12,7 +12,7 @@ public class Program
 	}
 
 	private static bool player1Turn = true;
-	private static BoardState[,] board = new BoardState[3, 3]; // 3x3 board;
+	private static readonly BoardState[,] board = new BoardState[3, 3]; // 3x3 board;
 
 	public static void Main(string[] args)
 	{
@@ -96,21 +96,13 @@ public class Program
 		for (int i = 0; i < 3; i++) {
 			Console.WriteLine("+-+-+-+");
 			for (int j = 0; j < 3; j++) {
-				Console.Write('|');
-				switch (board[i, j]) {
-					case BoardState.Unset:
-						Console.Write(' ');
-						break;
-					case BoardState.X:
-						Console.Write('X');
-						break;
-					case BoardState.O:
-						Console.Write('O');
-						break;
-				}
+				Console.Write("|" + board[i, j] switch {
+					BoardState.X => 'X',
+					BoardState.O => 'O',
+					_ => ' '
+				});
 			}
-			Console.Write('|');
-			Console.Write('\n');
+			Console.Write("|\n");
 		}
 		Console.WriteLine("+-+-+-+");
 	}
