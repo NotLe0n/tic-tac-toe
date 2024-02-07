@@ -26,13 +26,10 @@ DisplayBoard(board)
 fprintf("Player %d won the game!\n", player_1_turn + 1)
 
 function DisplayBoard(board)
-    for x=1:size(board, 2)
-        disp("+-+-+-+")
-        for y=1:size(board, 1)
-            chars = ["O", " ", "X"];
-            fprintf("|%s", chars(board(y, x)+2))
-        end
+    for x=1:size(board)
+        fprintf("+-+-+-+\n")
+        fprintf("|%c", interp1([79, 32, 88], board(:,x)+2))
         fprintf("|\n")
     end
-    disp("+-+-+-+")
+    fprintf("+-+-+-+\n")
 end
