@@ -1,3 +1,5 @@
 /.vscode
 *.asv
 .idea/
+*.o
+bin/
