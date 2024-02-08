@@ -5,7 +5,7 @@ int main() {
 	int board[9] = { 0 }; // 0 = unset; 1 = X; 2 = O
 	bool player_1_turn = true;
 
-	while (!check_win(board)) {
+	while (!check_win(board, 1) && !check_win(board, 2)) {
 		if (check_draw(board)) {
 			print_board(board);
 			std::cout << "This game was draw\n";
@@ -42,16 +42,11 @@ int main() {
 	return 0;
 }
 
-bool check_win(int board[]) {
+bool check_win(const int board[], const int& state) {
 	// check horizontal
 	for (int i = 0; i < 3; i++) {
 		// check X
-		if (board[0 + i * 3] == 1 && board[1 + i * 3] == 1 && board[2 + i * 3] == 1) {
-			return true;
-		}
-
-		// check O
-		if (board[0 + i * 3] == 2 && board[1 + i * 3] == 2 && board[2 + i * 3] == 2) {
+		if (board[0 + i * 3] == state && board[1 + i * 3] == state && board[2 + i * 3] == state) {
 			return true;
 		}
 	}
@@ -59,32 +54,21 @@ bool check_win(int board[]) {
 	// check vertical
 	for (int i = 0; i < 3; i++) {
 		// check X
-		if (board[i] == 1 && board[i + 3] == 1 && board[i + 6] == 1) {
-			return true;
-		}
-
-		// check O
-		if (board[i] == 2 && board[i + 3] == 2 && board[i + 6] == 2) {
+		if (board[i] == state && board[i + 3] == state && board[i + 6] == state) {
 			return true;
 		}
 	}
 
 	// check diagonal X
-	if ((board[0] == 1 && board[4] == 1 && board[8] == 1) 
-		|| board[2] == 1 && board[4] == 1 && board[6] == 1) {
-		return true;
-	}
-
-	// check diagonal O
-	if ((board[0] == 2 && board[4] == 2 && board[8] == 2) 
-		|| board[2] == 2 && board[4] == 2 && board[6] == 2) {
+	if ((board[0] == state && board[4] == state && board[8] == state) 
+		|| board[2] == state && board[4] == state && board[6] == state) {
 		return true;
 	}
 
 	return false;
 }
 
-bool check_draw(int board[]) {
+bool check_draw(const int board[]) {
 	for (int i = 0; i < 9; i++) {
 		if (board[i] == 0) {
 			return false;
@@ -94,7 +78,7 @@ bool check_draw(int board[]) {
 	return true;
 }
 
-void print_board(int board[]) {
+void print_board(const int board[]) {
 	for (int i = 0; i < 3; i++) {
 		std::cout << "+-+-+-+\n";
 		for (int j = 0; j < 3; j++) {
