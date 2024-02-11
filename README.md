@@ -1,7 +1,8 @@
-# tic-tac-toe
+# tic-tac-toe 
 Implementing a tic tac toe console application in every language I can.
 
-## Current Languages:
+## Current Languages: 
+#### ![](https://img.shields.io/github/languages/count/NotLe0n/tic-tac-toe) <sup>+1</sup>
 |Implementation|Percentage|
 |--------------|----------|
 |[C#](/CSharp/tic-tac-toe.cs)|![C# badge](https://img.shields.io/endpoint?url=https%3A%2F%2Flanguage-badge.le0n.dev%2F%3Fuser%3DNotLe0n%26repo%3Dtic-tac-toe%26lang%3DC%2523)|
